@@ -47,6 +47,8 @@ import tripguide from "./tripguide.png";
 import pyshop from "./pyshop.png";
 import omdena from "./omdena.png";
 import sowphie from "./sowphie.png";
+import linto from "./linto.png";
+import edward from "./edward.jpg";
 
 export {
   logo,
@@ -95,4 +97,6 @@ export {
   omdena_logo,
   sowphie_logo,
   zedaxis,
+  linto,
+  edward,
 };

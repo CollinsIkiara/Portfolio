@@ -40,7 +40,9 @@ import {
   omdena_logo,
   sowphie_logo,
   zedaxis,
-  jupyter,        
+  jupyter,
+  linto,
+  edward,        
 } from "../assets";
 
 
@@ -233,7 +235,7 @@ const testimonials = [
     name: "Linto N S",
     designation: "AI & ML Engineer",
     company: "Citi",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: linto,
   },
   {
     testimonial:
@@ -241,7 +243,7 @@ const testimonials = [
     name: "Edward Njiru",
     designation: "Co-founder | UXer",
     company: "Sowphie",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: edward,
   },
 ];
 
