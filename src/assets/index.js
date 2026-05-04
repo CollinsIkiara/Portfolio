@@ -49,6 +49,7 @@ import omdena from "./omdena.png";
 import sowphie from "./sowphie.png";
 import linto from "./linto.png";
 import edward from "./edward.jpg";
+import streamlit_logo from "./streamlit.png";
 
 export {
   logo,
@@ -96,6 +97,7 @@ export {
   kbc,
   omdena_logo,
   sowphie_logo,
+  streamlit_logo,
   zedaxis,
   linto,
   edward,

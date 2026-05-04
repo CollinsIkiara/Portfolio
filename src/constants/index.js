@@ -17,6 +17,7 @@ import {
   nodejs,
   mongodb,
   git,
+  github,
   github_logo,
   supabase,
   docker,
@@ -39,6 +40,7 @@ import {
   kbc,
   omdena_logo,
   sowphie_logo,
+  streamlit_logo,
   zedaxis,
   jupyter,
   linto,
@@ -272,6 +274,8 @@ const projects = [
     ],
     image: sowphie,
     source_code_link: "https://sowphie.io/",
+    source_code_icon: sowphie_logo,  
+    icon_bg: "#3B4A1F",
   },
   {
     name: "Impact of Climate Change on Maize Yield in Kenya",
@@ -293,6 +297,8 @@ const projects = [
     ],
     image: omdena,
     source_code_link: "https://omdena-maize-agricultural-yield-in-kenya.streamlit.app/",
+    source_code_icon: streamlit_logo, 
+    icon_bg: "#FF4B4B",
   },
   {
     name: "PyShop",
@@ -314,6 +320,8 @@ const projects = [
     ],
     image: pyshop,
     source_code_link: "https://github.com/",
+    source_code_icon: github,         
+    icon_bg: "#000000",
   },
 ];
 
