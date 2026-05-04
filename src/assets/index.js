@@ -6,12 +6,16 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import python from "./python.png";
+import web_development from "./web_development.png";
+import back_end from "./back_end.png";
 
-import css from "./tech/css.png";
+import bootstrap from "./tech/bootstrap.png";
 import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
+import supabase from "./tech/supabase.png";
 import git from "./tech/git.png";
-import html from "./tech/html.png";
+import github_logo from "./tech/github_logo.png";
+import postgresql from "./tech/postgresql.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
@@ -20,15 +24,29 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import python3 from "./tech/python3.png";
+import django from "./tech/django.png";
+import fastapi from "./tech/fastapi.png";
+import mysql from "./tech/mysql.png";
+import jupyter from "./tech/jupyter.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import exploreai from "./company/exploreai.png";
+import gd from "./company/gd.png";
+import kbc from "./company/kbc.png";
+import omdena_logo from "./company/omdena_logo.png";
+import sowphie_logo from "./company/sowphie_logo.png";
+import zedaxis from "./company/zedaxis.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import pyshop from "./pyshop.png";
+import omdena from "./omdena.png";
+import sowphie from "./sowphie.png";
 
 export {
   logo,
@@ -39,11 +57,16 @@ export {
   github,
   menu,
   close,
-  css,
+  bootstrap,
   docker,
-  figma,
+  supabase,
   git,
-  html,
+  github_logo,
+  python3,
+  django,
+  fastapi,
+  mysql,
+  postgresql,
   javascript,
   mongodb,
   nodejs,
@@ -52,6 +75,7 @@ export {
   tailwind,
   typescript,
   threejs,
+  jupyter,
   meta,
   shopify,
   starbucks,
@@ -59,4 +83,16 @@ export {
   carrent,
   jobit,
   tripguide,
+  python,
+  web_development,
+  back_end,
+  pyshop,
+  omdena,
+  sowphie,
+  exploreai,
+  gd,
+  kbc,
+  omdena_logo,
+  sowphie_logo,
+  zedaxis,
 };

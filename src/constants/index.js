@@ -5,15 +5,20 @@ import {
   web,
   javascript,
   typescript,
-  html,
-  css,
+  python3,
+  django,
+  fastapi,
+  mysql,
+  postgresql,
+  bootstrap,
   reactjs,
   redux,
   tailwind,
   nodejs,
   mongodb,
   git,
-  figma,
+  github_logo,
+  supabase,
   docker,
   meta,
   starbucks,
@@ -23,7 +28,21 @@ import {
   jobit,
   tripguide,
   threejs,
+  python,          
+  web_development, 
+  back_end,
+  pyshop,
+  omdena,
+  sowphie,
+  exploreai,
+  gd,
+  kbc,
+  omdena_logo,
+  sowphie_logo,
+  zedaxis,
+  jupyter,        
 } from "../assets";
+
 
 export const navLinks = [
   {
@@ -42,59 +61,63 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Web Development",
+    icon: web_development,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    title: "Python Developer",
+    icon: python,
   },
   {
     title: "Backend Developer",
-    icon: backend,
+    icon: back_end,
   },
   {
-    title: "Content Creator",
+    title: "Continuous Learner",
     icon: creator,
   },
 ];
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Python",
+    icon: python3,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "FastAPI",
+    icon: fastapi,
+  },
+  {
+    name: "Django",
+    icon: django,
+  },
+  {
+    name: "MySQL",
+    icon: mysql,
+  },
+  {
+    name: "Postgresql",
+    icon: postgresql,
+  },
+  {
+    name: "Jupyter Notebook",
+    icon: jupyter,
+  },
+  {
+    name: "Bootstrap",
+    icon: bootstrap,
   },
   {
     name: "JavaScript",
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
     name: "Tailwind CSS",
     icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
   },
   {
     name: "Three JS",
@@ -105,66 +128,100 @@ const technologies = [
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "GitHub",
+    icon: github_logo,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Supabase",
+    icon: supabase,
   },
 ];
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Intern",
+    company_name: "Gamma Delta East Africa Ltd.",
+    icon: gd,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "April 2017 - October 2017",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Influenced in design and revision of electrical drawings using Auto-CAD that enabled sound drawings for site work.",
+      "Influenced in the preparation of Bill of Quantities, Estimates and Load Analysis which aided in resource allocation during budgeting.",
+      "Suggested and oversaw the design of a Lightening Protection System in a hospital building in Mathare which aided in ensuring future occurrences of lightening did not have an adverse effect on the building.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Lead Graduate Engineer, Electrical Department",
+    company_name: "ZedAxis Architecture and Design",
+    icon: zedaxis,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "February 2018 - July 2019",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Designed all electrical schematic drawings for our various client needs and specifications with the aim of drafting a schematic plan for contractors as well as offering a bill of quantities for cost estimates for site work.",
+      "Strategized with consultants from other professions in Architecture, Landscape Architecture, Interior Design, Structural Engineering and Mechanical across various typologies of projects with the aim of delivering sound designs based on client needs thus delivering the intended consequences on site.",
+      "Conducted electrical load analysis that would form as advisory to clients on choosing different backup power options such as generators or solar energy systems.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    title: "Assistant Project Manager",
+    company_name: "ZedAxis Architecture and Design",
+    icon: zedaxis,
+    iconBg: "#383E56",
+    date: "February 2021 - April 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Executed all directives from the lead Project Manager to ensure daily deliverables were met on site.",
+      "Managed all technicians and subcontractors on site on behalf of the lead Project Manager which allowed him to engage more effectively on a one-on-one basis with the client without distraction from daily operations.",
+      "Managed all material inventory on a daily and weekly basis which enabled planning of purchasing and delivering necessary materials on site as when needed.",
+      " Prepared weekly reports on progress and work schedules for all technicians on site with the aim of keeping the client apprised.",
+    ],
+  },
+  {
+    title: "Technician in Technical Department",
+    company_name: "Kenya Broadcasting Corporation (KBC).",
+    icon: kbc,
+    iconBg: "#383E56",
+    date: "November 2022 - April 2023",
+    points: [
+      "Strategized with the radio department to provide DSTV connection to all vernacular radio stations within KBC for radio presenters to commentate on the FIFA World Cup 2022.",
+      "Performed all active maintenance of all radio equipment that ensured the proper running of all radio equipment and broadcast apparatus.",
+      "Monitored radio signals from the Control Apparatus Room and responded to any hiccups raised by presenters that ensuring broadcast signals remained on air.",
+    ],
+  },
+  {
+    title: "Career Break",
+    company_name: "ExploreAI Academy",
+    icon: exploreai,
+    iconBg: "#E6DEDD",
+    date: "May 2023 - August 2024",
+    points: [
+      "Took time to pursue studies in Data Science offered by ExploreAI Academy.",
+    ],
+  },
+  {
+    title: "Machine Learning Engineer",
+    company_name: "Omdena",
+    icon: omdena_logo,
+    iconBg: "#383E56",
+    date: "August 2024 - October 2024",
+    points: [
+      "Was a key contributor as a Junior ML Engineer for the entire data cycle phase of the 'Impact of Climate Change on Maize Agricultural Yield in Kenya' project (Nakuru chapter).",
+      "Collaborated with a core team of 10 data professionals ranging from recent graduates to PhD statisticians in data collection, processing, and analysis.",
+      "Conducted climate change analysis and yield analysis across 47 counties in Kenya.",
+      "Contributed to descriptive analysis documentation.",
+    ],
+  },
+  {
+    title: "Back-end Developer",
+    company_name: "Sowphie",
+    icon: sowphie_logo,
+    iconBg: "#E6DEDD",
+    date: "April 2025 - January 2026",
+    points: [
+      "Collaborated with a team of 3 developers in designing the back-end logic and APIs (estimate of about 140 endpoints) for the bookkeeping feature of the Sowphie app, using prompt engineering and FastAPI as a framework.",
+      "Part of a two-person team effort in designing the database architecture of the Sowphie app deployed on Supabase.",
+      "Collaborated with a team of 3 developers, responsible for API testing.",
+      "Responsible for cleaning and organizing the back-end code base into relevant files (routers, models, service (business logic) and schema files).",
+      "Responsible for all API documentation.",
     ],
   },
 ];
@@ -172,92 +229,88 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+      "I had the pleasure of working with Collins on the 'Impact of Climate Change on Maize Agricultural Yield in Kenya' project. He demonstrated strong data analysis skills and consistently stepped up to take on critical tasks, showcasing his proactive approach and dedication. Collins’ commitment to delivering accurate and insightful analyses greatly contributed to our success.",
+    name: "Linto N S",
+    designation: "AI & ML Engineer",
+    company: "Citi",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+      "Mr. Ikiara is a dedicated team player, who thrives in lifelong learning. He is very methodical in his approach to tasks and is an excellent critical thinker. One of the strengths I have particularly enjoyed is his analytical input from a managerial perspective. Additionally, his boldness in tackling something new is admirable, with an unwavering commitment to learn and deliver. He is quite an asset.",
+    name: "Edward Njiru",
+    designation: "Co-founder | UXer",
+    company: "Sowphie",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Sowphie",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Sowphie is the product I built working as part of the backend team. The key feature within the Sowphie app outlines the bookkeeping microservice of the farm management application, designed specifically for commercial farmers to efficiently manage and track their agricultural operations. Click the link to go to the official website.",
     tags: [
       {
-        name: "react",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "fastapi",
         color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
       },
       {
         name: "supabase",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "javascript",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: sowphie,
+    source_code_link: "https://sowphie.io/",
+  },
+  {
+    name: "Impact of Climate Change on Maize Yield in Kenya",
+    description:
+      "Web Application built as a collaborative Machine Learning project I did with other collaborators, investigating the impact of climate change on maize yield in Kenya, using time-series analysis. Click the link to test out the application.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "jupyter notebooks",
+        color: "green-text-gradient",
+      },
+      {
+        name: "streamlit",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: omdena,
+    source_code_link: "https://omdena-maize-agricultural-yield-in-kenya.streamlit.app/",
+  },
+  {
+    name: "PyShop",
+    description:
+      "A simple E-commerce website I built using Python, Bootstrap and the Django framework, for displaying available fruit produce and their prices",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "django",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: pyshop,
     source_code_link: "https://github.com/",
   },
 ];
