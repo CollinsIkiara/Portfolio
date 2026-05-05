@@ -47,6 +47,7 @@ import tripguide from "./tripguide.png";
 import pyshop from "./pyshop.png";
 import omdena from "./omdena.png";
 import sowphie from "./sowphie.png";
+import lewis from "./lewis.jpg";
 import linto from "./linto.png";
 import edward from "./edward.jpg";
 import streamlit_logo from "./streamlit.png";
@@ -101,4 +102,5 @@ export {
   zedaxis,
   linto,
   edward,
+  lewis,
 };

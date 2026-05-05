@@ -44,7 +44,8 @@ import {
   zedaxis,
   jupyter,
   linto,
-  edward,        
+  edward,
+  lewis,        
 } from "../assets";
 
 
@@ -233,19 +234,27 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I had the pleasure of working with Collins on the 'Impact of Climate Change on Maize Agricultural Yield in Kenya' project. He demonstrated strong data analysis skills and consistently stepped up to take on critical tasks, showcasing his proactive approach and dedication. Collins’ commitment to delivering accurate and insightful analyses greatly contributed to our success.",
-    name: "Linto N S",
-    designation: "AI & ML Engineer",
-    company: "Citi",
-    image: linto,
-  },
-  {
-    testimonial:
-      "Mr. Ikiara is a dedicated team player, who thrives in lifelong learning. He is very methodical in his approach to tasks and is an excellent critical thinker. One of the strengths I have particularly enjoyed is his analytical input from a managerial perspective. Additionally, his boldness in tackling something new is admirable, with an unwavering commitment to learn and deliver. He is quite an asset.",
+      "Mr. Ikiara is a dedicated team player, who thrives in lifelong learning. He is very methodical in his approach to tasks and is an excellent critical thinker. One of the strengths I have particularly enjoyed is his analytical input from a managerial perspective. He is quite an asset.",
     name: "Edward Njiru",
     designation: "Co-founder | UXer",
     company: "Sowphie",
     image: edward,
+  },
+  {
+    testimonial:
+      "Collins and I worked together at Sowphie. He stood out for his ability to think a few steps ahead, especially when it came to edge cases and system reliability. He's also a solid communicator and a thoughtful engineer who cares about the 'why' behind what's he's building. I enjoyed working with him and would gladly do so again.",
+    name: "Lewis Thagichu",
+    designation: "Tech Lead",
+    company: "Sowphie",
+    image: lewis,
+  },
+  {
+    testimonial:
+      "I had the pleasure of working with Collins on the 'Impact of Climate Change on Maize Agricultural Yield in Kenya' project. He demonstrated strong data analysis skills and consistently stepped up to take on critical tasks, showcasing his proactive approach and dedication.",
+    name: "Linto N S",
+    designation: "AI & ML Engineer",
+    company: "Citi",
+    image: linto,
   },
 ];
 
