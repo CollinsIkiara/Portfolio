@@ -41,6 +41,7 @@ import {
   omdena_logo,
   sowphie_logo,
   streamlit_logo,
+  vercel,
   zedaxis,
   jupyter,
   linto,
@@ -329,7 +330,7 @@ const projects = [
     ],
     image: pyshop,
     source_code_link: "https://github.com/",
-    source_code_icon: github,         
+    source_code_icon: vercel,         
     icon_bg: "#000000",
   },
 ];

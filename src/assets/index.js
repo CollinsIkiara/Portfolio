@@ -51,6 +51,7 @@ import lewis from "./lewis.jpg";
 import linto from "./linto.png";
 import edward from "./edward.jpg";
 import streamlit_logo from "./streamlit.png";
+import vercel from "./vercel.png";
 
 export {
   logo,
@@ -99,6 +100,7 @@ export {
   omdena_logo,
   sowphie_logo,
   streamlit_logo,
+  vercel,
   zedaxis,
   linto,
   edward,
