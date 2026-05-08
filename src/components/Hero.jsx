@@ -24,8 +24,8 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      {/* 
-      <div className='absolute inset-0 top-[80px] w-full h-full'>
+
+      {/* <div className='absolute inset-0 top-[80px] w-full h-full'>
         <ComputersCanvas />
       </div> */}
 
