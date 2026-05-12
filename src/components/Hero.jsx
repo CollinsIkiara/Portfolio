@@ -2,8 +2,9 @@ import { lazy, Suspense } from 'react';
 import { styles } from '../styles';
 
 // Lazy load ComputersCanvas so it doesn't block initial paint
-const ComputersCanvas = lazy(() => import('./canvas'));
-
+const ComputersCanvas = lazy(() =>
+  import('./canvas').then((mod) => ({ default: mod.ComputersCanvas }))
+);
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
