@@ -1,16 +1,15 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { Canvas, extend } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import React, { Suspense, useEffect, useState, useRef } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
-
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+      <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -32,6 +31,8 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [shouldRender, setShouldRender] = useState(false);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -41,38 +42,59 @@ const ComputersCanvas = () => {
     setIsMobile(mediaQuery.matches);
 
     // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
+    const handleMediaQueryChange = (event) => setIsMobile(event.matches);
 
     // Add the callback function as a listener for changes to the media query
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
+    return () => mediaQuery.removeEventListener("change", handleMediaQueryChange);
+  }, []);
+
+  // Only mount the Canvas when the container is visible in the viewport.
+  // This ensures the WebGL context, GLTF fetch, and Three.js initialization
+  // happen after the browser has already painted the hero text.
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldRender(true);
+          // Disconnect after first intersection — we mount once and never unmount
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    // Start observing the container div
+    if (containerRef.current) observer.observe(containerRef.current);
+
+    // Remove the observer when the component is unmounted
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <Canvas
-      frameloop='demand'
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
-
-      <Preload all />
-    </Canvas>
+    <div ref={containerRef} style={{ width: '100%', height: '100%' }}>
+      {shouldRender && (
+        <Canvas
+          frameloop="demand"
+          shadows
+          dpr={[1, 1.5]}                        // Reduced from [1, 2] — less GPU load on retina screens
+          camera={{ position: [20, 3, 5], fov: 25 }}
+          gl={{ preserveDrawingBuffer: false }}  // Changed from true — only needed for canvas screenshots
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+            />
+            <Computers isMobile={isMobile} />
+          </Suspense>
+          {/* Removed <Preload all /> — was forcing eager asset loading on page init */}
+        </Canvas>
+      )}
+    </div>
   );
 };
 

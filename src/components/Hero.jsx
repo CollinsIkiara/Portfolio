@@ -1,13 +1,15 @@
-import { motion } from 'framer-motion';
-
+import { lazy, Suspense } from 'react';
 import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
+
+// Lazy load ComputersCanvas so it doesn't block initial paint
+const ComputersCanvas = lazy(() => import('./canvas'));
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className="relative w-full h-screen mx-auto">
+      {/* Hero text — renders immediately, nothing blocking it */}
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
@@ -25,27 +27,32 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* <div className='absolute inset-0 top-[80px] w-full h-full'>
-        <ComputersCanvas />
-      </div> */}
+      {/* 3D Canvas — lazy loaded, only after hero text paints */}
+      <Suspense fallback={null}>
+        <div className="absolute inset-0 top-[80px] w-full h-full">
+          <ComputersCanvas />
+        </div>
+      </Suspense>
 
+      {/* Scroll indicator — pure CSS, no framer-motion */}
       <div className="absolute xs:bottom-10 bottom-10 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: 'loop',
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
+            <div className="scroll-dot w-3 h-3 rounded-full bg-secondary mb-1" />
           </div>
         </a>
       </div>
+
+      {/* Pure CSS bounce animation — replaces framer-motion entirely */}
+      <style>{`
+        .scroll-dot {
+          animation: bounce-scroll 1.5s ease-in-out infinite;
+        }
+        @keyframes bounce-scroll {
+          0%, 100% { transform: translateY(0); }
+          50%       { transform: translateY(24px); }
+        }
+      `}</style>
     </section>
   );
 };
