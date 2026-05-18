@@ -23,7 +23,7 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import threejs from "./tech/threejs.png";
 import python3 from "./tech/python3.png";
 import django from "./tech/django.png";
 import fastapi from "./tech/fastapi.png";
