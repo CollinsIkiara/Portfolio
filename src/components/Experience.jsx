@@ -69,7 +69,17 @@ const Experience = () => {
         </motion.div>
       </div>
 
-      <div className='mt-10 flex flex-col'>
+      <div className='w-full flex'>
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        >
+          My professional journey across backend development, machine learning,
+          engineering, and technical operations.
+        </motion.p>
+      </div>
+
+      <div className='mt-20 flex flex-col'>
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard
